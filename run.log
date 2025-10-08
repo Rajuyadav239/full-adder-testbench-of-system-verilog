@@ -1,0 +1,95 @@
+# vsim top -l run.log 
+# Start time: 15:34:07 on Oct 07,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading work.filelist_sv_unit(fast)
+# Loading work.top(fast)
+# Loading work.intf(fast)
+# Loading work.test(fast)
+# Loading work.full_adder(fast)
+# Loading work.intf(fast)
+run
+# generator class signals : a=1, b=0, c=1
+# generator class signals : a=0, b=1, c=0
+# driver class signals : a=1, b=0, c=1
+# driver class signals : a=0, b=1, c=0
+# monitor class signals : a=0, b=0, c=0
+# monitor class signals : a=0, b=0, c=0
+# scoreboard signals : a=0, b=0, c=0
+# '''''pass'''''
+# scoreboard signals : a=0, b=0, c=0
+# '''''pass'''''
+# a=0, b=1, c=0, sum=1, carry=0
+add wave -position insertpoint sim:/top/intff/*
+add wave -position insertpoint sim:/top/utt/*
+run -all
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.filelist_sv_unit(fast)
+# Loading work.top(fast)
+# Loading work.intf(fast)
+# Loading work.test(fast)
+# Loading work.full_adder(fast)
+# Loading work.intf(fast)
+run -all
+# generator class signals : a=1, b=0, c=1
+# generator class signals : a=0, b=1, c=0
+# driver class signals : a=1, b=0, c=1
+# driver class signals : a=0, b=1, c=0
+# monitor class signals : a=0, b=0, c=0
+# monitor class signals : a=0, b=0, c=0
+# scoreboard signals : a=0, b=0, c=0
+# '''''pass'''''
+# scoreboard signals : a=0, b=0, c=0
+# '''''pass'''''
+# a=0, b=1, c=0, sum=1, carry=0
+do run.do
+# QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 15:37:50 on Oct 07,2025
+# vlog -reportprogress 300 filelist.sv "+acc" 
+# -- Compiling interface intf
+# -- Compiling module full_adder
+# -- Compiling package filelist_sv_unit
+# -- Compiling program test
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 15:37:51 on Oct 07,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# End time: 15:37:52 on Oct 07,2025, Elapsed time: 0:03:45
+# Errors: 0, Warnings: 0
+# vsim top -l run.log 
+# Start time: 15:37:52 on Oct 07,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.filelist_sv_unit(fast)
+# Loading work.top(fast)
+# Loading work.intf(fast)
+# Loading work.test(fast)
+# Loading work.full_adder(fast)
+# Loading work.intf(fast)
+add wave -position insertpoint sim:/top/intff/*
+add wave -position insertpoint sim:/top/utt/*
+run
+# monitor class signals : a=0, b=0, c=0
+# monitor class signals : a=0, b=0, c=0
+# scoreboard signals : a=0, b=0, c=0
+# '''''pass'''''
+# scoreboard signals : a=0, b=0, c=0
+# '''''pass'''''
+# a=x, b=x, c=x, sum=x, carry=x
+# generator class signals : a=1, b=0, c=1
+# driver class signals : a=1, b=0, c=1
+# a=1, b=0, c=1, sum=0, carry=1
+# generator class signals : a=0, b=1, c=0
+# driver class signals : a=0, b=1, c=0
+# a=0, b=1, c=0, sum=1, carry=0
+# generator class signals : a=0, b=1, c=1
+# generator class signals : a=0, b=0, c=1
+# generator class signals : a=0, b=1, c=0
+add wave -position insertpoint sim:/top/intff/*
+add wave -position insertpoint sim:/top/utt/*
+run -all
+# End time: 16:28:20 on Oct 07,2025, Elapsed time: 0:50:28
+# Errors: 0, Warnings: 0
